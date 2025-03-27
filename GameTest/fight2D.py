@@ -1,4 +1,5 @@
-import pygame
+import os
+import pygame 
 
 # Inicializa o Pygame
 pygame.init()
@@ -6,12 +7,15 @@ pygame.init()
 # Configuração da tela
 LARGURA, ALTURA = 800, 600
 tela = pygame.display.set_mode((LARGURA, ALTURA))
-pygame.display.set_caption("Jogo de Luta 2D")
+
+pygame.display.set_caption("FIGHT LEGENDS PIXEL")
 
 # Carregar spritesheet
-spritesheet = pygame.image.load("/GameTest/imagens/mini-riu.png")
+caminho_imagem = os.path.join("imagens", "mini-riu.png")
+spritesheet = pygame.image.load(caminho_imagem)
 
 # Configuração dos quadros de animação
+
 frame_largura = spritesheet.get_width() // 4  # Divide a largura total pelo número de quadros
 frame_altura = spritesheet.get_height()
 num_quadros = 4  # Quantidade de quadros na spritesheet
